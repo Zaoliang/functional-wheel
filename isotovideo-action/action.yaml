@@ -1,0 +1,19 @@
+---
+name: 'Isotovideo test runner'
+description: 'Execute openQA tests with logging offline'
+branding:
+  icon: 'check-circle'
+  color: 'green'
+
+inputs:
+  schedule:
+    description: The test modules to be executed
+    required: false
+    default: ''
+
+runs:
+  using: qemu-x86
+  image: "SLES-15-SP4-x86_64-:25278:gimp-Server-DVD-Incidents@64bit-with-external_testkit.qcow2"
+  args:
+    - CASEDIR=.
+    - SCHEDULE=${{ inputs.schedule }}
