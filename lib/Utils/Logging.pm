@@ -1,13 +1,13 @@
 # Copyright 2022 SUSE LLC
 # SPDX-License-Identifier: GPL-2.0-or-later
 
-=head1 Utils::Logging-test
+=head1 Utils::Logging
 
-C<Utils::Logging_test> - Save logs directly on the worker for offline upload via ulogs 
+C<Utils::Logging> - Save logs directly on the worker for offline upload via ulogs 
 
 =cut
 
-package Utils::Logging_test;
+package Utils::Logging;
 
 use base 'Exporter';
 use Exporter;
