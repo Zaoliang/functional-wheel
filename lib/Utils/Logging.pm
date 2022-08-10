@@ -16,7 +16,7 @@ use warnings;
 use testapi 'script_output';
 use Mojo::File qw(path);
 
-our @EXPORT = qw(save_ulog);
+our @EXPORT_OK = qw(save_ulog);
 
 =head2
 
