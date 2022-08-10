@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/isotovideo-action@main
+      - uses: kalikiana/isotovideo-action@main
         with:
-          schedule: tests/boot/boot_to_desktop,tests/console/save_ulog
+          schedule: tests/console/save_ulog
       - uses: actions/upload-artifact@v2
         with:
           name: Test results
