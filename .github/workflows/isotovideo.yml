@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: Zaoliang/isotovideo-action@main
+      - uses: actions/isotovideo-action@main
         with:
           schedule: tests/boot/boot_to_desktop,tests/console/save_ulog
       - uses: actions/upload-artifact@v2
