@@ -7,7 +7,7 @@
 # Maintainer: QE Core <qe-core@suse.de>
 # add this test module to a wheel 
 
-use base 'consoletest';
+use consoletest;
 use testapi;
 use utils;
 use strict;
