@@ -13,7 +13,7 @@ use base 'Exporter';
 use Exporter;
 use strict;
 use warnings;
-use testapi 'script_output';
+# use testapi 'script_output';
 use Mojo::File qw(path);
 
 our @EXPORT_OK = qw(save_ulog);
