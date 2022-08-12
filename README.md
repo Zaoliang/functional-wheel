@@ -2,16 +2,16 @@
 This is a wheel repository which can be used for os-autoinst-distri-opensuse (functional)
 Arccoding to the blog at https://kalikiana.gitlab.io/post/2022-08-04-re-inventing-the-wheel
 
-##### Usage: 
+#### Usage: 
 check unit tests or function of openQA tests which can be run in container environment directly on github.
 
-##### repository structure
-at moment directories 'lib', 'tests' and 'needles' required to run tests by isotovideo
-.github/workflows is the directory which contains an essential configuration to run unit tests which have been added to wheel repository under 'tests':
+#### repository structure
 
-isotovideo.yml
+Thedirectories 'lib', 'tests', 'needles' are required.
 
-example:
+'.github/workflows' is the directory. It contains configurations to control running tests or library files for unit tests. 
+
+##### .github/workflows/isotovideo.yml
 
 ~~~
 # This is a workflow to get started with Actions
@@ -36,9 +36,9 @@ jobs:
 
 ~~~
 
-isotovideo-action is the directory which contains action.yml, the action.yml is actually the configuration file for runs.
+'isotovideo-action' is the directory which contains action.yml, the action.yml is actually the configuration file for runs.
 
-here is an example of action.yaml under directory 'isotovideo-action' 
+##### isotovideo-action/action.yaml 
 
 ~~~
 name: 'Isotovideo test runner'
@@ -63,14 +63,16 @@ runs:
 
 ~~~
 
+
 #### Limitations
 
 At moment the wheels rely on os-autoinst and support to run unit tests only. The library of os-autoinst-distri-opensuse cannot be used directly.
 
 Due to the concept of wheel at this stage, we need to implemt own wheel rules to be able support to run openQA functional tests using own existing libray directly on github, by using a docker image (SLES product).
 
+
 #### Notes
-I see this is a potenial of wheel: test against new build by some sanity checks started directly via github workflow.
+I see there are some potenials in wheel: test against new build by some sanity checks started directly via github workflow.
 
 
 
