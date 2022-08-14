@@ -3,13 +3,14 @@ This is a wheel repository which can be used for os-autoinst-distri-opensuse (fu
 Arccoding to the blog at https://kalikiana.gitlab.io/post/2022-08-04-re-inventing-the-wheel
 
 #### Usage: 
-check unit tests or function of openQA tests which can be run in container environment directly on github.
+check unit tests or function of openQA tests which can be run in docker container directly on github.
 
 #### repository structure
 
-Thedirectories 'lib', 'tests', 'needles' are required.
+The directories 'lib', 'tests', 'needles' are required.
 
-'.github/workflows' is the directory. It contains configurations to control running tests or library files for unit tests. 
+'.github/workflows' contains action, it controls running tests (here unit tests). 
+
 
 ##### .github/workflows/isotovideo.yml
 
@@ -36,7 +37,7 @@ jobs:
 
 ~~~
 
-'isotovideo-action' is the directory which contains action.yml, the action.yml is actually the configuration file for runs.
+'isotovideo-action' is the directory contained action.yml
 
 ##### isotovideo-action/action.yaml 
 
@@ -66,13 +67,13 @@ runs:
 
 #### Limitations
 
-At moment the wheels rely on os-autoinst and support to run unit tests only. The library of os-autoinst-distri-opensuse cannot be used directly.
-
-Due to the concept of wheel at this stage, we need to implemt own wheel rules to be able support to run openQA functional tests using own existing libray directly on github, by using a docker image (SLES product).
+At moment the wheels rely on os-autoinst and it supports to run unit tests only. Therefore the library of os-autoinst-distri-opensuse cannot be used directly.
 
 
-#### Notes
-I see there are some potenials in wheel: test against new build by some sanity checks started directly via github workflow.
+#### Ideas and Notes
+
+Self-hosted runner machine can be a solution for us to run openQA tests. It requires setup of these runner machine with private respository, env etc.
+Or at least we can use a docker image (SLES product) to run automated tests on new image.
 
 
 
