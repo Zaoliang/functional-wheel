@@ -28,7 +28,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: kalikiana/isotovideo-action@main
         with:
-          schedule: tests/console/save_ulog,tests/console/do_nothing
+          schedule: tests/save_ulog,tests/show_dir,tests/write2log
       - uses: actions/upload-artifact@v2
         with:
           name: Test results

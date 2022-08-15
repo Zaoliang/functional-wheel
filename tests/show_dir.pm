@@ -1,4 +1,4 @@
-# Summary: write some strings to a log file 
+# Summary: show all directories on SUT and save them to a log file 
 # add this unit test module to a wheel 
 
 use strict;
@@ -10,9 +10,13 @@ use Logging 'save_ulog';
 sub run {
 
     my ($out, $filename) = @_;
-    $out = system("journalctl --no-pager -axb -o short-precise");
-    $filename = 'test.log';
+    $out = system("ls -lah");
+    $filename = 'show_dir';
     save_ulog($out, $filename);
+    print "checking the log:\n";
+    system("ls -lah ulogs/$filename");
+    system("cat ulogs/$filename");
+    print "empty?\n\n\n";
     print "Writing to $filename successfully!\n" if -e path("ulogs/$filename");
 }
 

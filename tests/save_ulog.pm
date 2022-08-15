@@ -1,4 +1,4 @@
-# Summary: save tmp directory and save to a log file 
+# Summary: save journal log 
 # add this unit test module to a wheel 
 
 use strict;
@@ -10,8 +10,8 @@ use Logging 'save_ulog';
 sub run {
 
     my ($out, $filename) = @_;
-    $out = system("ls");
-    $filename = 'show_dir';
+    $out = system("journalctl --no-pager -axb -o short-precise");
+    $filename = 'test.log';
     save_ulog($out, $filename);
     print "Writing to $filename successfully!\n" if -e path("ulogs/$filename");
 }

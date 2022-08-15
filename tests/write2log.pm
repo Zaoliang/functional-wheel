@@ -13,12 +13,12 @@ sub run {
     that is used to write to file
 EOF
 
-    $filename = 'test.log';
+    $filename = 'string2log';
     open(FH, '>', $filename) or die $!;
     print FH $str;
     close(FH);
 
-    print "Writing to file successfully!\n";
+    print "Writing to file successfully!\n" if -e $filename;
 }
 
 1;
