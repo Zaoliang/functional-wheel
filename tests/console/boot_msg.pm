@@ -10,8 +10,8 @@ use Logging 'save_ulog';
 sub run {
 
     my ($out, $filename) = @_;
-    $out = system("cat /var/log/messages");
-    $filename = 'messages';
+    $out = system("ls");
+    $filename = 'show_dir';
     save_ulog($out, $filename);
     print "Writing to $filename successfully!\n" if -e path("ulogs/$filename");
 }

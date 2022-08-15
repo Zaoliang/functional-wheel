@@ -13,7 +13,6 @@ sub run {
     $out = system("journalctl --no-pager -axb -o short-precise");
     $filename = 'test.log';
     save_ulog($out, $filename);
-    system(cat path("ulogs/$filename"));
     print "Writing to $filename successfully!\n" if -e path("ulogs/$filename");
 }
 
