@@ -72,8 +72,8 @@ At moment the wheels rely on os-autoinst and it supports to run unit tests only.
 
 #### Ideas and Notes
 
-Self-hosted runner machine can be a solution for us to run openQA tests. It requires setup of these runner machine with private respository, env etc.
-Or at least we can use a docker image (SLES product) to run automated tests on new image.
+Self-hosted runner can be a solution for us to run openQA tests. It requires setup of these runner machine with private respository and installation of self-hosted runner application.
+See https://docs.github.com/en/actions/hosting-your-own-runners/adding-self-hosted-runners
 
-
+Or use a different docker image (SLES product) to run automated tests in container.
 
