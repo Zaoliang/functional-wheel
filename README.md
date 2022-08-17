@@ -3,14 +3,12 @@ This is a wheel repository which can be used for os-autoinst-distri-opensuse (fu
 Arccoding to the blog at https://kalikiana.gitlab.io/post/2022-08-04-re-inventing-the-wheel
 
 #### Usage: 
-check unit tests or function of openQA tests which can be run in docker container directly on github.
+check unit tests or function test of openQA tests, the tests can be run in docker container directly on github.
 
-#### repository structure
+#### repository
 
-The directories 'lib', 'tests', 'needles' are required.
-
-'.github/workflows' contains action, it controls running tests (here unit tests). 
-
+The repository contains directories 'lib', 'tests', 'needles'. These directories are required by openQA os-autoinst.
+It contains '.github/workflows'. In this directory we have a yaml action file which controls running tests (here unit tests). 
 
 ##### .github/workflows/isotovideo.yml
 
