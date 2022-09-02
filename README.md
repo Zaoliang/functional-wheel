@@ -1,4 +1,4 @@
-# functional-wheel
+# functional_wheel
 This is a wheel repository which can be used for os-autoinst-distri-opensuse (functional)
 Arccoding to the blog at https://kalikiana.gitlab.io/post/2022-08-04-re-inventing-the-wheel
 
